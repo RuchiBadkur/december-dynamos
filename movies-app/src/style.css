@@ -1,0 +1,7 @@
+.movieNames-list p{
+    background-color: black;
+    color: tomato;
+    padding: 10px;
+    width: fit-content;
+    margin: 5px;
+}
