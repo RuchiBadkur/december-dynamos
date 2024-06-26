@@ -1,18 +1,21 @@
-// display title and when you click on it all the other details will be displayed
 import React, {useState} from "react";
-import MovieList from "./Components/MovieList"
-import "./style.css"; //complete file is executable rather one or two components
+import "./style.css";
 
-
-
+import MovieList from "./Components/MovieList";
+import MovieDisplay from "./Components/MovieDisplay";
 
 const App = () => {
+  const [selectedMovie, setSelectedMovie] = useState(null);
 
-    
-    return(
+  console.log(selectedMovie);
+
+    return (
         <>
-            <MovieList />
-          
+          {/* display movies name */}
+          <MovieList updateSelectedMovies={setSelectedMovie}/>
+
+          {/* display movie details */}
+          <MovieDisplay clickedMovies={selectedMovie}/>
         </>
     )
 }

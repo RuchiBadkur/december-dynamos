@@ -3,6 +3,7 @@ import Navbar from './Componenets/Navbar';
 import About from './Componenets/About';
 import Section from './Componenets/Section';
 import Footer from './Componenets/Footer';
+import Button from './Componenets/Button';
 
 const sectionData = [
     {
@@ -19,6 +20,9 @@ const sectionData = [
         des:"Description -  Acciojob is a platform dedicated to launching tech careers from scratch. Recreated few sections of the AccioJob landing page. Using HTML,CSS and bootstrap.  Major learnings - Website is responsive, color sch and typography. Features -Good user experience, ensuring smo navigation and clear content presentation.  Tech stack - HTML | CSS | Bootstrap Description Blinkit is a hyper-fast delivery service, and t will demonstrate how to recreate its website us simple HTML and CSS.  Features - Visually impressive website, Respons Web Design  Major learnings -  HTML Semantic Markup, CSS Styl Techniques Tech stack - HTML  | CSS  | BOOTSTRAP"
     }
 ]
+
+const fruits = ["Apple", "Banana", "Raspberry"];
+
 const App = () => {
 
     
@@ -44,6 +48,13 @@ const App = () => {
             <Section 
             /> */}
             <Footer />
+
+            {
+                fruits.map(fruit => (
+                        <Button props ={fruit}/>
+                    )
+                )
+            }
         </>
     )
 }

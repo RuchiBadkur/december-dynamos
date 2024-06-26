@@ -16,3 +16,7 @@ console.log(z); //[true, false,false, false, true, true];
 // filter()
 let y = arr.filter(item => (item%2)=== 0);
 console.log(y); //[10, 50, 42];
+
+// reduce
+let sum = arr.reduce((item, total) => total += item, 0);
+console.log(sum);

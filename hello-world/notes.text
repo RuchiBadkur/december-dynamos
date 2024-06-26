@@ -1,0 +1,9 @@
+
+
+hot reloading : change will automaticallly be reflected here 
+
+jsx: javascript syntax like html and xml, support js expression({name})
+
+#Don't write any custom logic in index.js file
+
+

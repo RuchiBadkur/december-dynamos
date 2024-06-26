@@ -1,18 +1,23 @@
-import React,{useState} from 'react';
+import React, {useState} from "react";
 import moviesData from "../data/moviesData";
+import MovieDisplay from "./MovieDisplay";
 
-const MovieList = () => {
-    const [selectedMovie, setSelectedMovie] = useState("");
-
-    return(
+const MovieList = ({updateSelectedMovies}) => {
+    // const [selectedMovie, setSelectedMovie] = useState(null);
+    return (
         <>
-            <div className="movieNames-list">
+
+            {/* display movie name */}
+            <div className="movie-list">
                 {
-                    moviesData.map((item)=>(
-                        <p onClick={()=>setSelectedMovie(item)}>{item.title}</p>
+                    moviesData.map((item) => (
+                        <p onClick={()=>updateSelectedMovies(item)}>{item.title}</p>
                     ))
                 }
             </div>
+
+            {/* display movie details */}
+            {/* <MovieDisplay clickedMovies={selectedMovie} /> */}
         </>
     )
 }
